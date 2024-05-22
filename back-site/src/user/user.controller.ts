@@ -1,4 +1,4 @@
-import { Controller, Body, Post, Get } from '@nestjs/common';
+import { Controller, Body, Post, Get, Param } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 
@@ -12,8 +12,8 @@ export class UserController {
     	return await this.userService.create(createUserDto); //definir (create) dentro de user.service.ts
 	}
 	
-	@Get()
-	async findAll() {
-		return await this.userService.findAll();
+	@Get(':name')
+	async findUser(@Param("name") name: string) {
+		return await this.userService.findUser(name);
 	}
 }

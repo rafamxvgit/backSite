@@ -15,5 +15,13 @@ export class UserService {
 	async findAll() {
 		return await this.prisma.user.findMany();
 	}
+
+	async findUser(user: string){
+		return await this.prisma.user.findFirst({
+			where: {
+			  name: user,
+			},
+		  })
+	}
 }
 

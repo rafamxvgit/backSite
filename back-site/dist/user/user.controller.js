@@ -23,8 +23,8 @@ let UserController = class UserController {
     async create(createUserDto) {
         return await this.userService.create(createUserDto);
     }
-    async findAll() {
-        return await this.userService.findAll();
+    async findUser(name) {
+        return await this.userService.findUser(name);
     }
 };
 exports.UserController = UserController;
@@ -36,11 +36,12 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "create", null);
 __decorate([
-    (0, common_1.Get)(),
+    (0, common_1.Get)(':name'),
+    __param(0, (0, common_1.Param)("name")),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], UserController.prototype, "findAll", null);
+], UserController.prototype, "findUser", null);
 exports.UserController = UserController = __decorate([
     (0, common_1.Controller)('user'),
     __metadata("design:paramtypes", [user_service_1.UserService])

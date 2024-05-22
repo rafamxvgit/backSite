@@ -23,6 +23,13 @@ let UserService = class UserService {
     async findAll() {
         return await this.prisma.user.findMany();
     }
+    async findUser(user) {
+        return await this.prisma.user.findFirst({
+            where: {
+                name: user,
+            },
+        });
+    }
 };
 exports.UserService = UserService;
 exports.UserService = UserService = __decorate([

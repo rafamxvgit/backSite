@@ -11,12 +11,12 @@ export declare class UserController {
         curso: string;
         departamento: string;
     }>;
-    findAll(): Promise<{
+    findUser(name: string): Promise<{
         id: number;
         email: string;
         name: string;
         password: string;
         curso: string;
         departamento: string;
-    }[]>;
+    }>;
 }

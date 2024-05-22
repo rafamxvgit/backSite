@@ -19,4 +19,12 @@ export declare class UserService {
         curso: string;
         departamento: string;
     }[]>;
+    findUser(user: string): Promise<{
+        id: number;
+        email: string;
+        name: string;
+        password: string;
+        curso: string;
+        departamento: string;
+    }>;
 }
