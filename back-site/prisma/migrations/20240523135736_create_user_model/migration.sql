@@ -4,7 +4,9 @@ CREATE TABLE "User" (
     "username" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "password" TEXT NOT NULL
+    "password" TEXT NOT NULL,
+    "curso" TEXT NOT NULL,
+    "departamento" TEXT NOT NULL
 );
 
 -- CreateIndex

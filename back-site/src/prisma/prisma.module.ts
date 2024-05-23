@@ -3,7 +3,7 @@ import { Global, Module } from "@nestjs/common";
 
 @Global()
 @Module({
-	providers: [PrismaService],
-	exports: [PrismaService],
+    providers: [PrismaService],
+    exports: [PrismaService],
 })
 export class PrismaModule {};
