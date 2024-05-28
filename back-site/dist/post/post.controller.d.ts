@@ -1,7 +1,14 @@
 import { PostService } from './post.service';
-import { Prisma } from '@prisma/client';
+import { PostDTO } from './dto/post.dto';
 export declare class PostController {
     private readonly postService;
     constructor(postService: PostService);
-    create(postData: Prisma.PostCreateInput): Promise<Prisma.PostCreateInput>;
+    create(postData: PostDTO): Promise<{
+        id: number;
+        usuarioID: number;
+        professor: string;
+        disciplina: string;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
 }
